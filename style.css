@@ -148,67 +148,72 @@ main section .right .filter{
     background-color:rgba(255,255,255,0.03);
     padding:var(--padding-sm);
     border-radius:var(--border-radius-md);
+    transition:.3s;
+}
+
+main section .right .filter:hover{
+    background-color:rgba(255,255,255,0.06);
 }
 
 main section .right .filter p{
     color:var(--text-secondary-color);
-    margin-bottom:4px;
+    margin-bottom:8px;
     text-transform:capitalize;
     font-size:var(--font-size-md);
 }
-
 main section .right .filter input{
     width:100%;
-    outline:none;
-    margin-top:var(--margin-sm);
-    appearance:none;
-    cursor:pointer;
     background:transparent;
+    cursor:pointer;
 }
 
-/* Slider Track */
-
 main section .right .filter input::-webkit-slider-runnable-track{
-    background:linear-gradient(
-        90deg,
-        #00d4ff,
-        #00ff99
-    );
     height:6px;
-    border-radius:10px;
+    border-radius:20px;
 }
 
 main section .right .filter input::-moz-range-track{
-    background:linear-gradient(
-        90deg,
-        #00d4ff,
-        #00ff99
-    );
     height:6px;
-    border-radius:10px;
+    border-radius:20px;
 }
-
-/* Slider Thumb */
 
 main section .right .filter input::-webkit-slider-thumb{
     appearance:none;
-    width:18px;
-    height:18px;
+    -webkit-appearance:none;
+    width:16px;
+    height:16px;
     border-radius:50%;
     background:#fff;
-    border:2px solid #00d4ff;
-    margin-top:-6px;
+    border:2px solid #1db954;
+    margin-top:-5px;
     cursor:pointer;
+    transition:all .25s ease;
+    box-shadow:
+    0 0 8px rgba(29,185,84,.4);
+}
+
+main section .right .filter input::-webkit-slider-thumb:hover{
+    transform:scale(1.15);
+    box-shadow:
+    0 0 15px rgba(29,185,84,.8);
 }
 
 main section .right .filter input::-moz-range-thumb{
-    width:18px;
-    height:18px;
-    border:none;
+    width:16px;
+    height:16px;
     border-radius:50%;
     background:#fff;
+    border:2px solid #1db954;
     cursor:pointer;
+    transition:.25s;
+    box-shadow:
+    0 0 8px rgba(29,185,84,.4);
 }
+
+main section .right .filter input::-moz-range-thumb:hover{
+    transform:scale(1.15);
+}
+
 
 /* Canvas */
 
